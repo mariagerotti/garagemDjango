@@ -23,7 +23,7 @@ class Acessorio(models.Model):
         return self.descricao
 
     class Meta:
-        verbose_name_plural = "Acessorios"
+        verbose_name = "Acessório"
 
 
 class Cor(models.Model):
@@ -51,4 +51,5 @@ class Veiculo(models.Model):
         return f"{self.marca}, {self.modelo}, ({self.ano}), ({self.cor})"
 
     class Meta:
-        verbose_name_plural = "Veiculos"
+        verbose_name = "Veículo"
+        verbose_name_plural = "Veículos"
