@@ -1,7 +1,18 @@
 from rest_framework.viewsets import ModelViewSet
 
-from garagem.models import Categoria, Cor, Marca
-from garagem.serializers import CategoriaSerializer, CorSerializer, MarcaSerializer
+from garagem.models import Acessorio, Categoria, Cor, Marca, Modelo
+from garagem.serializers import (
+    AcessorioSerializer,
+    CategoriaSerializer,
+    CorSerializer,
+    MarcaSerializer,
+    ModeloSerializer
+)
+
+
+class AcessorioViewSet(ModelViewSet):
+    queryset = Acessorio.objects.all()
+    serializer_class = AcessorioSerializer
 
 
 class CategoriaViewSet(ModelViewSet):
@@ -17,3 +28,7 @@ class CorViewSet(ModelViewSet):
 class MarcaViewSet(ModelViewSet):
     queryset = Marca.objects.all()
     serializer_class = MarcaSerializer
+
+class ModeloViewSet(ModelViewSet):
+    queryset = Modelo.objects.all()
+    serializer_class = ModeloSerializer
