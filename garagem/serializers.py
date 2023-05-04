@@ -25,13 +25,11 @@ class MarcaSerializer(ModelSerializer):
     class Meta:
         model = Marca
         fields = "__all__"
-
-
+        
 class ModeloSerializer(ModelSerializer):
     class Meta:
         model = Modelo
         fields = "__all__"
-
 
 class VeiculoSerializer(ModelSerializer):
     class Meta:
