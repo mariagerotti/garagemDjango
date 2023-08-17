@@ -1,11 +1,9 @@
 from rest_framework.viewsets import ModelViewSet
 
 from garagem.models import Veiculo
-from garagem.serializers import (
-    VeiculoSerializer,
-    VeiculoListSerializer,
-    VeiculoDetailSerializer,
-)
+from garagem.serializers import  VeiculoSerializer
+ 
+from garagem.serializers.VeiculoSerializer import VeiculoListSerializer, VeiculoDetailSerializer
 
 class VeiculoViewSet(ModelViewSet):
     queryset = Veiculo.objects.all()
