@@ -1,8 +1,18 @@
 from django.db import models
+from uploader.models import Image
+
 
 from garagem.models import Cor ,Modelo
 
 class Veiculo(models.Model):
+    capa = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+    )
     ano = models.IntegerField(default=0, null=True, blank=True)
     cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="veiculos")
     modelo = models.ForeignKey(
@@ -19,3 +29,5 @@ class Veiculo(models.Model):
     class Meta:
         verbose_name = "Veículo"
         verbose_name_plural = "Veículos"
+        
+
