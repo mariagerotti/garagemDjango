@@ -21,7 +21,7 @@ class Veiculo(models.Model):
     descricao = models.CharField(max_length=100, default="descricao", null=True, blank=True)
 
     def __str__(self):
-        return f"{self.marca}, ({self.ano}), ({self.cor})"
+        return f"({self.ano}), ({self.cor})"
 
     class Meta:
         verbose_name = "Veículo"
