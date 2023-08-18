@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "garagem",
+    "django_extensions",
     "drf_spectacular",
     "usuario",
     "uploader",
