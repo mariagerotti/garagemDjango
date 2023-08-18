@@ -9,7 +9,7 @@ class Veiculo(models.Model):
         Image,
         related_name="+",
     )
-    acessorios = models.ManyToManyField(default=None, to="Acessorio", blank=True)
+    acessorios = models.ManyToManyField(default=None, to="Acessorio", related_name="veiculos",blank=True)
     ano = models.IntegerField(default=0, null=True, blank=True)
     cor = models.ForeignKey(Cor, on_delete=models.PROTECT, related_name="veiculos")
     modelo = models.ForeignKey(
